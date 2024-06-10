@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { MarqueeEquityTaskStateProvider } from './context/MarqueeEquityTaskStateProvider';
+
+
+import { RouterProvider } from "react-router-dom";
+import { router } from './route/routes';
+
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <MarqueeEquityTaskStateProvider>
+
+      <RouterProvider router={router} />
+
+    </MarqueeEquityTaskStateProvider>
   </React.StrictMode>
 );
 
