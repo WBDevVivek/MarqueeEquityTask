@@ -109,7 +109,7 @@ const SearchComp = () => {
   // const debounceUpdateFun = useMemo(() => debounceFun(updateSearch, 500), [])
 
   const debounceUpdateFun = useMemo(() => {
-    debounceFun(updateSearch, 500)
+   return debounceFun(updateSearch, 500)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []
   )
